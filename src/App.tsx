@@ -159,14 +159,15 @@ export default function App() {
 
           <div className="time-badge">Thursday &nbsp;·&nbsp; 11:00 AM IST</div>
           
-<div className="flex flex-col items-center justify-center mt-2 mb-6">
+<div className="flex justify-center mt-2 mb-6">
   <a 
     href="https://www.google.com/calendar/render?action=TEMPLATE&text=Jumail+%26+Wedding&dates=20260820T110000/20260820T160000&details=We+joyfully+invite+you+to+celebrate+our+wedding+at+Wind+Valley+Resort.&location=Wind+Valley+Resort,+Cherkala,+Kerala&sf=true&output=xml"
     target="_blank" 
     rel="noopener noreferrer"
-    className="text-[10px] sans uppercase tracking-[0.2em] text-rose-mid hover:text-rose-dark transition-colors flex items-center gap-2"
+    className="inline-flex items-center gap-2 px-6 py-2 bg-[#fdf2f4] border border-[#b5354f]/20 rounded-full text-[#b5354f] text-[11px] font-medium uppercase tracking-[0.1em] hover:bg-[#b5354f] hover:text-white transition-all duration-300 shadow-sm"
   >
-    <span>✦📅 Add to Google Calendar✦</span>
+    <span>📅</span>
+    <span>✦ Add to Google Calendar ✦</span>
   </a>
 </div>
           <div className="venue-sep"></div>
@@ -175,8 +176,10 @@ export default function App() {
           <div className="venue-name">Wind Valley</div>
           <div className="venue-location">Pady Road, Cherkala</div>
 
-         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: '2rem', marginBottom: '1rem' }}>
-  <div style={{ padding: '12px', backgroundColor: 'white', border: '1px solid #f3e5f5', borderRadius: '12px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)', display: 'inline-block' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', marginTop: '2rem' }}>
+  
+  {/* QR Code Container */}
+  <div style={{ padding: '12px', backgroundColor: 'white', border: '1px solid #f3e5f5', borderRadius: '12px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)', marginBottom: '1rem' }}>
               <QRCodeCanvas 
                 value="https://www.google.com/maps/search/?api=1&query=Wind+valley+resort+Cherkala+Kerala&query_place_id=ChIJ2RXmOwCDpDsRB02XSYO9ekY" 
                 size={120}
@@ -185,6 +188,8 @@ export default function App() {
                 fgColor="#b5354f"
               />
             </div>
+
+           {/* Maps Link Container */}
             <a 
               href="https://www.google.com/maps/search/?api=1&query=Wind+valley+resort+Cherkala+Kerala&query_place_id=ChIJ2RXmOwCDpDsRB02XSYO9ekY" 
               target="_blank" 
