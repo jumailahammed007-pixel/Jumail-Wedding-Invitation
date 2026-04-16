@@ -209,6 +209,15 @@ export default function App() {
           </p>
         </div>
 
+        <div className="blessing-section" style={{ textAlign: 'center', margin: '20px 0', padding: '10px' }}>
+  <h2 style={{ fontSize: '1.5rem', marginBottom: '10px', color: '#5d4037' }}>
+    بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
+  </h2>
+  <p style={{ fontStyle: 'italic', fontSize: '1rem', color: '#795548' }}>
+    May Allah bless both of you, shower His blessings upon you, and bring you together in goodness.
+  </p>
+</div>
+        
         {/* ===== FOOTER ===== */}
         <div className="footer reveal">
           <div className="gold-divider" style={{ marginBottom: '1.2rem' }}><div className="gold-diamond"></div></div>
