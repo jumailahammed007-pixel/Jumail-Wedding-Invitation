@@ -159,19 +159,25 @@ export default function App() {
 
           <div className="time-badge">Thursday &nbsp;·&nbsp; 11:00 AM IST</div>
           
-<div className="flex justify-center mt-8 mb-10">
-  <a 
-    href="https://www.google.com/calendar/render?action=TEMPLATE&text=Jumail+%26+Wedding&dates=20260820T110000/20260820T160000&details=We+joyfully+invite+you+to+celebrate+our+wedding+at+Wind+Valley+Resort.&location=Wind+Valley+Resort,+Cherkala,+Kerala&sf=true&output=xml"
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="group relative inline-flex items-center gap-3 px-8 py-3 bg-white border-2 border-[#b5354f]/10 rounded-full text-[#b5354f] text-[12px] font-semibold uppercase tracking-[2px] transition-all duration-500 hover:bg-[#b5354f] hover:text-white hover:border-[#b5354f] hover:scale-105 shadow-[0_4px_15px_rgba(181,53,79,0.1)] hover:shadow-[0_8px_25px_rgba(181,53,79,0.3)]"
-  >
-    <span className="text-lg group-hover:rotate-12 transition-transform duration-300">📅</span>
-    <span>Save the Date to Calendar</span>
+<div className="flex justify-center mt-12 mb-14 px-4">
+  <div className="relative group p-[1px] rounded-full bg-gradient-to-r from-transparent via-[#b5354f]/20 to-transparent">
+    <a 
+      href="https://www.google.com/calendar/render?action=TEMPLATE&text=Jumail+%26+Wedding&dates=20260820T110000/20260820T160000&details=We+joyfully+invite+you+to+celebrate+our+wedding+at+Wind+Valley+Resort.&location=Wind+Valley+Resort,+Cherkala,+Kerala&sf=true&output=xml"
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-4 px-10 py-4 bg-white/80 backdrop-blur-sm border border-[#b5354f]/30 rounded-full text-[#b5354f] text-[13px] font-bold uppercase tracking-[3px] transition-all duration-500 hover:bg-[#b5354f] hover:text-white shadow-[0_10px_30px_-10px_rgba(181,53,79,0.3)] hover:shadow-[0_15px_40px_-5px_rgba(181,53,79,0.5)] active:scale-95"
+    >
+      <span className="text-xl">📅</span>
+      <span className="relative">
+        Save the Date
+        <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-current transition-all duration-500 group-hover:w-full"></span>
+      </span>
+    </a>
     
-    {/* Subtle animated highlight */}
-    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] pointer-events-none"></div>
-  </a>
+    {/* Decorative Sparkles (Design element) */}
+    <div className="absolute -top-2 -right-2 text-[#b5354f]/40 text-xs animate-pulse">✦</div>
+    <div className="absolute -bottom-2 -left-2 text-[#b5354f]/40 text-xs animate-pulse delay-700">✦</div>
+  </div>
 </div>
           <div className="venue-sep"></div>
 
