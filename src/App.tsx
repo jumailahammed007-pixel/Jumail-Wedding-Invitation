@@ -76,7 +76,6 @@ const [isLetterOpened, setIsLetterOpened] = useState(false);
       <div className="float-petal" style={{ left: '40%', width: '11px', height: '11px', background: '#f9c0d0', animationDuration: '13s', animationDelay: '4s' }}></div>
 
       <div className="page">
-        <div className="page">
   {/* ===== ENVELOPE REVEAL SECTION ===== */}
   <div className="flex flex-col items-center justify-center min-h-[60vh] reveal px-4">
     {!isLetterOpened ? (
@@ -97,7 +96,7 @@ const [isLetterOpened, setIsLetterOpened] = useState(false);
         </div>
       </div>
     ) : (
-      /* 2. THE REVEALED HERO CONTENT (Bismillah & Names) */
+      /* 2. THE REVEALED HERO CONTENT */
       <div className="animate-in fade-in zoom-in duration-1000 w-full flex flex-col items-center">
         <div className="hero">
           <div className="bismillah">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
@@ -109,14 +108,14 @@ const [isLetterOpened, setIsLetterOpened] = useState(false);
           </div>
 
           <div className="names-stack space-y-2 mt-4 text-center">
-            <p className="text-5xl md:text-6xl text-[#b5354f] font-serif">Jumail</p>
+            <p className="text-5xl md:text-6xl text-[#b5354f] font-serif tracking-tight">Jumail</p>
             <p className="text-[#5a2e3a]/60 font-serif">&</p>
-            <p className="text-5xl md:text-6xl text-[#b5354f] font-serif">Anshida</p>
+            <p className="text-5xl md:text-6xl text-[#b5354f] font-serif tracking-tight">Anshida</p>
           </div>
         </div>
       </div>
-    )}
-  </div>
+    )} {/* This closes the isLetterOpened ? : block */}
+  </div> {/* This closes the Envelope Reveal container */}
         {/* ===== HERO ===== */}
         <div className="hero">
           <div className="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
