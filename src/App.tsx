@@ -196,12 +196,12 @@ export default function App() {
 
         {/* ===== GOLD DIVIDER ===== */}
         <div className="gold-divider reveal"><div className="gold-diamond"></div></div>
-<div className="w-full flex flex-col items-center justify-center my-10 reveal">
-  <div className="text-[#b5354f] text-4xl md:text-5xl font-serif text-center leading-relaxed">
+<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%', margin: '40px 0' }} className="reveal">
+  <div style={{ color: '#b5354f', fontSize: '2.5rem', textAlign: 'center', width: '100%' }}>
     إن شاء الله
   </div>
-  {/* Small decorative dot to match the Bismillah style */}
-  <div className="w-1 h-1 bg-[#b5354f]/30 rounded-full mt-4"></div>
+  {/* Small decorative dot */}
+  <div style={{ width: '4px', height: '4px', backgroundColor: 'rgba(181, 53, 79, 0.3)', borderRadius: '50%', marginTop: '16px' }}></div>
 </div>
         {/* ===== PRESENCE CARD ===== */}
         <div className="presence-card reveal">
