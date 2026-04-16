@@ -158,6 +158,7 @@ export default function App() {
           </div>
 
           <div className="time-badge">Thursday &nbsp;·&nbsp; 11:00 AM IST</div>
+          
 <div className="flex flex-col items-center justify-center mt-2 mb-6">
   <a 
     href="https://www.google.com/calendar/render?action=TEMPLATE&text=Jumail+%26+Wedding&dates=20260820T110000/20260820T160000&details=We+joyfully+invite+you+to+celebrate+our+wedding+at+Wind+Valley+Resort.&location=Wind+Valley+Resort,+Cherkala,+Kerala&sf=true&output=xml"
@@ -165,7 +166,7 @@ export default function App() {
     rel="noopener noreferrer"
     className="text-[10px] sans uppercase tracking-[0.2em] text-rose-mid hover:text-rose-dark transition-colors flex items-center gap-2"
   >
-    <span>📅 Add to Google Calendar</span>
+    <span>✦📅 Add to Google Calendar✦</span>
   </a>
 </div>
           <div className="venue-sep"></div>
@@ -175,7 +176,8 @@ export default function App() {
           <div className="venue-location">Pady Road, Cherkala</div>
 
           <div className="mt-8 flex flex-col items-center justify-center w-full">
-            <div className="p-3 bg-white border border-rose-light rounded-xl shadow-sm ">
+            <div className="p-3 bg-white border border-rose-light rounded-xl shadow-sm 
+             flex justify-center items-center">
               <QRCodeCanvas 
                 value="https://www.google.com/maps/search/?api=1&query=Wind+valley+resort+Cherkala+Kerala&query_place_id=ChIJ2RXmOwCDpDsRB02XSYO9ekY" 
                 size={120}
