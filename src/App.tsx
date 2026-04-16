@@ -196,7 +196,10 @@ export default function App() {
 
         {/* ===== GOLD DIVIDER ===== */}
         <div className="gold-divider reveal"><div className="gold-diamond"></div></div>
-
+<div className="flex flex-col items-center justify-center my-8 reveal">
+  <span className="text-[#b5354f] text-3xl font-serif mb-2">إن شاء الله</span>
+  <span className="text-[#b5354f]/70 text-[11px] uppercase tracking-[0.3em] font-light">Insha Allah</span>
+</div>
         {/* ===== PRESENCE CARD ===== */}
         <div className="presence-card reveal">
           <p className="presence-main">
