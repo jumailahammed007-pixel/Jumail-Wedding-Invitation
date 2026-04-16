@@ -176,7 +176,6 @@ export default function App() {
     
     {/* Decorative Sparkles (Design element) */}
     <div className="absolute -top-2 -right-2 text-[#b5354f]/40 text-xs animate-pulse">✦</div>
-    <div className="absolute -bottom-2 -left-2 text-[#b5354f]/40 text-xs animate-pulse delay-700">✦</div>
   </div>
 </div>
           <div className="venue-sep"></div>
