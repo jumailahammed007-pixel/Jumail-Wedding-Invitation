@@ -165,10 +165,10 @@ export default function App() {
           <div className="venue-name">Wind Valley</div>
           <div className="venue-location">Pady Road, Cherkala</div>
 
-          <div className="mt-8 flex flex-col items-center">
-            <div className="p-3 bg-white border border-rose-light rounded-xl shadow-sm inline-block">
+          <div className="mt-8 flex flex-col items-center justify-center w-full">
+            <div className="p-3 bg-white border border-rose-light rounded-xl shadow-sm ">
               <QRCodeCanvas 
-                value="https://share.google/RKhqoclv1HZh9JYTr" 
+                value="https://maps.app.goo.gl/?link=https://www.google.com/maps/place/G393%252B238%2BWind%2Bvalley%2Bresort,%2BCherkala,%2BPady,%2BKerala%2B671541/data%3D!4m2!3m1!1s0x3ba483003be615d9:0x467abd8349974d07!18m1!1e1?utm_source%3Dmstt_1%26entry%3Dgps%26coh%3D192189" 
                 size={120}
                 level="H"
                 includeMargin={false}
@@ -176,7 +176,7 @@ export default function App() {
               />
             </div>
             <a 
-              href="https://share.google/RKhqoclv1HZh9JYTr" 
+              href="https://maps.app.goo.gl/?link=https://www.google.com/maps/place/G393%252B238%2BWind%2Bvalley%2Bresort,%2BCherkala,%2BPady,%2BKerala%2B671541/data%3D!4m2!3m1!1s0x3ba483003be615d9:0x467abd8349974d07!18m1!1e1?utm_source%3Dmstt_1%26entry%3Dgps%26coh%3D192189" 
               target="_blank" 
               rel="noopener noreferrer"
               className="mt-4 text-[10px] sans uppercase tracking-[0.2em] text-rose-mid hover:text-rose transition-colors flex items-center gap-2"
