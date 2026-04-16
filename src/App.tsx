@@ -160,7 +160,7 @@ export default function App() {
           <div className="time-badge">Thursday &nbsp;·&nbsp; 11:00 AM IST</div>
 <div className="flex flex-col items-center justify-center mt-2 mb-6">
   <a 
-    href="https://www.google.com/calendar/render?action=TEMPLATE&text=Jumail+%26+Hanunath+Wedding&dates=20260820T110000/20260820T160000&details=We+joyfully+invite+you+to+celebrate+our+wedding+at+Wind+Valley+Resort.&location=Wind+Valley+Resort,+Cherkala,+Kerala&sf=true&output=xml"
+    href="https://www.google.com/calendar/render?action=TEMPLATE&text=Jumail+%26+Wedding&dates=20260820T110000/20260820T160000&details=We+joyfully+invite+you+to+celebrate+our+wedding+at+Wind+Valley+Resort.&location=Wind+Valley+Resort,+Cherkala,+Kerala&sf=true&output=xml"
     target="_blank" 
     rel="noopener noreferrer"
     className="text-[10px] sans uppercase tracking-[0.2em] text-rose-mid hover:text-rose-dark transition-colors flex items-center gap-2"
