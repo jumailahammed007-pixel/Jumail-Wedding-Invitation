@@ -138,7 +138,7 @@ export default function App() {
 
         {/* ===== DATE & VENUE ===== */}
         <div className="info-card reveal">
-          <div className="section-label">— The Blessed Day —</div>
+          <div className="section-label">— Save the Date —</div>
 
           <div className="date-row">
             <div className="date-col">
