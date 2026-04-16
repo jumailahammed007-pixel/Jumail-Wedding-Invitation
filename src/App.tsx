@@ -115,41 +115,23 @@ const [isRevealed, setIsRevealed] = React.useState(false);
   className="info-card reveal cursor-pointer relative overflow-hidden"
   onClick={() => setIsRevealed(true)}
 >
-  {/* The Hidden Cover */}
   {!isRevealed && (
     <div className="absolute inset-0 bg-[#b5354f] z-20 flex flex-col items-center justify-center transition-all duration-500">
-      <div className="text-white text-xl font-serif mb-2 animate-pulse text-center px-4">
-        Tap to Reveal Date & Time
-      </div>
+      <div className="text-white text-xl font-serif mb-2 animate-pulse text-center px-4">Tap to Reveal Date & Time</div>
       <div className="w-12 h-[1px] bg-white/40"></div>
     </div>
   )}
 
-  {/* Revealed Content */}
   <div className={transition-all duration-1000 ease-out ${isRevealed ? 'blur-0 opacity-100 scale-100' : 'blur-xl opacity-0 scale-110'}}>
     <div className="section-label">Save the Date</div>
-    
     <div className="date-row">
-      <div className="date-col">
-        <div className="date-big">20</div>
-        <div className="date-lbl">Day</div>
-      </div>
+      <div className="date-col"><div className="date-big">20</div><div className="date-lbl">Day</div></div>
       <div className="date-sep-line"></div>
-      <div className="date-col">
-        <div className="date-small">August</div>
-        <div className="date-lbl">Month</div>
-      </div>
+      <div className="date-col"><div className="date-small">August</div><div className="date-lbl">Month</div></div>
       <div className="date-sep-line"></div>
-      <div className="date-col">
-        <div className="date-small">2026</div>
-        <div className="date-lbl">Year</div>
-      </div>
+      <div className="date-col"><div className="date-small">2026</div><div className="date-lbl">Year</div></div>
     </div>
-
-    {/* The Time Badge is now part of the reveal */}
-    <div className="time-badge mt-4">
-      Thursday &nbsp;•&nbsp; 11:00 AM IST
-    </div>
+    <div className="time-badge mt-4">Thursday &nbsp;•&nbsp; 11:00 AM IST</div>
   </div>
 </div>
           
