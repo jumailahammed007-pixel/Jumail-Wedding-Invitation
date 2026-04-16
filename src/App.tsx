@@ -175,9 +175,8 @@ export default function App() {
           <div className="venue-name">Wind Valley</div>
           <div className="venue-location">Pady Road, Cherkala</div>
 
-          <div className="mt-8 flex flex-col items-center justify-center w-full">
-            <div className="p-3 bg-white border border-rose-light rounded-xl shadow-sm 
-             flex justify-center items-center">
+         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: '2rem', marginBottom: '1rem' }}>
+  <div style={{ padding: '12px', backgroundColor: 'white', border: '1px solid #f3e5f5', borderRadius: '12px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)', display: 'inline-block' }}>
               <QRCodeCanvas 
                 value="https://www.google.com/maps/search/?api=1&query=Wind+valley+resort+Cherkala+Kerala&query_place_id=ChIJ2RXmOwCDpDsRB02XSYO9ekY" 
                 size={120}
