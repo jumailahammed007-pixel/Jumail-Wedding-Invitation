@@ -158,7 +158,16 @@ export default function App() {
           </div>
 
           <div className="time-badge">Thursday &nbsp;·&nbsp; 11:00 AM IST</div>
-
+<div className="flex flex-col items-center justify-center mt-2 mb-6">
+  <a 
+    href="https://www.google.com/calendar/render?action=TEMPLATE&text=Jumail+%26+Hanunath+Wedding&dates=20260820T110000/20260820T160000&details=We+joyfully+invite+you+to+celebrate+our+wedding+at+Wind+Valley+Resort.&location=Wind+Valley+Resort,+Cherkala,+Kerala&sf=true&output=xml"
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-[10px] sans uppercase tracking-[0.2em] text-rose-mid hover:text-rose-dark transition-colors flex items-center gap-2"
+  >
+    <span>📅 Add to Google Calendar</span>
+  </a>
+</div>
           <div className="venue-sep"></div>
 
           <div className="section-label">— Venue —</div>
@@ -168,7 +177,7 @@ export default function App() {
           <div className="mt-8 flex flex-col items-center justify-center w-full">
             <div className="p-3 bg-white border border-rose-light rounded-xl shadow-sm ">
               <QRCodeCanvas 
-                value="https://maps.app.goo.gl/?link=https://www.google.com/maps/place/G393%252B238%2BWind%2Bvalley%2Bresort,%2BCherkala,%2BPady,%2BKerala%2B671541/data%3D!4m2!3m1!1s0x3ba483003be615d9:0x467abd8349974d07!18m1!1e1?utm_source%3Dmstt_1%26entry%3Dgps%26coh%3D192189" 
+                value="https://www.google.com/maps/search/?api=1&query=Wind+valley+resort+Cherkala+Kerala&query_place_id=ChIJ2RXmOwCDpDsRB02XSYO9ekY" 
                 size={120}
                 level="H"
                 includeMargin={false}
@@ -176,7 +185,7 @@ export default function App() {
               />
             </div>
             <a 
-              href="https://maps.app.goo.gl/?link=https://www.google.com/maps/place/G393%252B238%2BWind%2Bvalley%2Bresort,%2BCherkala,%2BPady,%2BKerala%2B671541/data%3D!4m2!3m1!1s0x3ba483003be615d9:0x467abd8349974d07!18m1!1e1?utm_source%3Dmstt_1%26entry%3Dgps%26coh%3D192189" 
+              href="https://www.google.com/maps/search/?api=1&query=Wind+valley+resort+Cherkala+Kerala&query_place_id=ChIJ2RXmOwCDpDsRB02XSYO9ekY" 
               target="_blank" 
               rel="noopener noreferrer"
               className="mt-4 text-[10px] sans uppercase tracking-[0.2em] text-rose-mid hover:text-rose transition-colors flex items-center gap-2"
