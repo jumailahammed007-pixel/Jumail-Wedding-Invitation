@@ -9,7 +9,6 @@ export default function App() {
     seconds: '00'
   });
   
-const [isLetterOpened, setIsLetterOpened] = useState(false);
   
   useEffect(() => {
     // Countdown timer (IST = UTC+5:30)
@@ -76,46 +75,6 @@ const [isLetterOpened, setIsLetterOpened] = useState(false);
       <div className="float-petal" style={{ left: '40%', width: '11px', height: '11px', background: '#f9c0d0', animationDuration: '13s', animationDelay: '4s' }}></div>
 
       <div className="page">
-  {/* ===== ENVELOPE REVEAL SECTION ===== */}
-  <div className="flex flex-col items-center justify-center min-h-[60vh] reveal px-4">
-    {!isLetterOpened ? (
-      /* 1. THE CLOSED ENVELOPE */
-      <div 
-        className="cursor-pointer group relative transition-all duration-500 flex flex-col items-center"
-        onClick={() => setIsLetterOpened(true)}
-      >
-        <img 
-          src="/envelope.jpg" 
-          alt="Wedding Envelope" 
-          className="w-full max-w-[320px] rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-105" 
-        />
-        <div className="mt-8 text-center">
-          <p className="text-[#b5354f]/60 uppercase tracking-[0.5em] text-[11px] animate-pulse">
-            Please Open
-          </p>
-        </div>
-      </div>
-    ) : (
-      /* 2. THE REVEALED HERO CONTENT */
-      <div className="animate-in fade-in zoom-in duration-1000 w-full flex flex-col items-center">
-        <div className="hero">
-          <div className="bismillah">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
-          <div className="bismillah-transliteration">In the name of Allah, the Most Gracious, the Most Merciful</div>
-          <div className="tag-line">- Wedding Invitation -</div>
-          
-          <div className="flex justify-center my-6">
-             <img src="/wedding_logo.png" className="w-24 h-24 object-contain" alt="Logo" />
-          </div>
-
-          <div className="names-stack space-y-2 mt-4 text-center">
-            <p className="text-5xl md:text-6xl text-[#b5354f] font-serif tracking-tight">Jumail</p>
-            <p className="text-[#5a2e3a]/60 font-serif">&</p>
-            <p className="text-5xl md:text-6xl text-[#b5354f] font-serif tracking-tight">Anshida</p>
-          </div>
-        </div>
-      </div>
-    )} {/* This closes the isLetterOpened ? : block */}
-  </div> {/* This closes the Envelope Reveal container */}
         {/* ===== HERO ===== */}
         <div className="hero">
           <div className="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
