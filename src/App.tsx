@@ -159,15 +159,18 @@ export default function App() {
 
           <div className="time-badge">Thursday &nbsp;·&nbsp; 11:00 AM IST</div>
           
-<div className="flex justify-center mt-2 mb-6">
+<div className="flex justify-center mt-8 mb-10">
   <a 
     href="https://www.google.com/calendar/render?action=TEMPLATE&text=Jumail+%26+Wedding&dates=20260820T110000/20260820T160000&details=We+joyfully+invite+you+to+celebrate+our+wedding+at+Wind+Valley+Resort.&location=Wind+Valley+Resort,+Cherkala,+Kerala&sf=true&output=xml"
     target="_blank" 
     rel="noopener noreferrer"
-    className="inline-flex items-center gap-2 px-6 py-2 bg-[#fdf2f4] border border-[#b5354f]/20 rounded-full text-[#b5354f] text-[11px] font-medium uppercase tracking-[0.1em] hover:bg-[#b5354f] hover:text-white transition-all duration-300 shadow-sm"
+    className="group relative inline-flex items-center gap-3 px-8 py-3 bg-white border-2 border-[#b5354f]/10 rounded-full text-[#b5354f] text-[12px] font-semibold uppercase tracking-[2px] transition-all duration-500 hover:bg-[#b5354f] hover:text-white hover:border-[#b5354f] hover:scale-105 shadow-[0_4px_15px_rgba(181,53,79,0.1)] hover:shadow-[0_8px_25px_rgba(181,53,79,0.3)]"
   >
-    <span>📅</span>
-    <span>✦ Add to Google Calendar ✦</span>
+    <span className="text-lg group-hover:rotate-12 transition-transform duration-300">📅</span>
+    <span>Save the Date to Calendar</span>
+    
+    {/* Subtle animated highlight */}
+    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] pointer-events-none"></div>
   </a>
 </div>
           <div className="venue-sep"></div>
