@@ -81,40 +81,14 @@ export default function App() {
 
           <div className="tag-line">— Wedding Invitation —</div>
 
-          {/* Rose SVG art */}
-          <svg className="rose-art" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="30" cy="95" rx="20" ry="8" fill="#f2b8c6" opacity="0.5" transform="rotate(-50 30 95)" />
-            <ellipse cx="110" cy="95" rx="20" ry="8" fill="#f2b8c6" opacity="0.5" transform="rotate(50 110 95)" />
-            <ellipse cx="50" cy="80" rx="16" ry="6" fill="#f2b8c6" opacity="0.4" transform="rotate(-25 50 80)" />
-            <ellipse cx="90" cy="80" rx="16" ry="6" fill="#f2b8c6" opacity="0.4" transform="rotate(25 90 80)" />
-            <path d="M70 130 Q48 105 30 90" stroke="#e8a0b4" strokeWidth="1.2" fill="none" />
-            <path d="M70 130 Q92 105 110 90" stroke="#e8a0b4" strokeWidth="1.2" fill="none" />
-            <path d="M70 130 Q70 90 70 30" stroke="#e8a0b4" strokeWidth="1.2" fill="none" />
-            <path d="M70 90 Q55 75 45 65" stroke="#e8a0b4" strokeWidth="0.8" fill="none" />
-            <path d="M70 90 Q85 75 95 65" stroke="#e8a0b4" strokeWidth="0.8" fill="none" />
-            <ellipse cx="70" cy="42" rx="18" ry="22" fill="#e8849e" opacity="0.9" />
-            <ellipse cx="55" cy="52" rx="16" ry="20" fill="#d4607e" opacity="0.85" transform="rotate(-25 55 52)" />
-            <ellipse cx="85" cy="52" rx="16" ry="20" fill="#d4607e" opacity="0.85" transform="rotate(25 85 52)" />
-            <ellipse cx="70" cy="65" rx="14" ry="18" fill="#c04568" opacity="0.8" />
-            <ellipse cx="58" cy="68" rx="13" ry="16" fill="#d4607e" opacity="0.75" transform="rotate(-15 58 68)" />
-            <ellipse cx="82" cy="68" rx="13" ry="16" fill="#d4607e" opacity="0.75" transform="rotate(15 82 68)" />
-            <circle cx="70" cy="44" r="14" fill="#c04568" />
-            <circle cx="70" cy="44" r="10" fill="#d4607e" />
-            <circle cx="70" cy="44" r="6" fill="#e8849e" />
-            <circle cx="70" cy="42" r="3" fill="#f9c0d0" />
-            <circle cx="70" cy="42" r="1.5" fill="#c9a84c" />
-            <circle cx="45" cy="64" r="8" fill="#d4607e" opacity="0.8" />
-            <circle cx="45" cy="64" r="5" fill="#e8849e" />
-            <circle cx="45" cy="64" r="2.5" fill="#f9c0d0" />
-            <circle cx="95" cy="64" r="8" fill="#d4607e" opacity="0.8" />
-            <circle cx="95" cy="64" r="5" fill="#e8849e" />
-            <circle cx="95" cy="64" r="2.5" fill="#f9c0d0" />
-            <circle cx="32" cy="32" r="1.5" fill="#c9a84c" opacity="0.7" />
-            <circle cx="108" cy="28" r="1.5" fill="#c9a84c" opacity="0.7" />
-            <circle cx="20" cy="62" r="1" fill="#c9a84c" opacity="0.5" />
-            <circle cx="120" cy="58" r="1" fill="#c9a84c" opacity="0.5" />
-          </svg>
-
+          <div className="flex justify-center my-6">
+  <img 
+    src="wedding-logo.png" 
+    alt="Wedding Logo" 
+    className="w-32 h-32 md:w-40 md:h-40 object-contain" 
+  />
+</div>
+          
           <div className="together-line">Together with their families</div>
 
           <div className="groom-name">Jumail Ahammed</div>
