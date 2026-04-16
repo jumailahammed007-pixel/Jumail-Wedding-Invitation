@@ -1,0 +1,231 @@
+import { useEffect, useState } from 'react';
+import { QRCodeCanvas } from 'qrcode.react';
+
+export default function App() {
+  const [timeLeft, setTimeLeft] = useState({
+    days: '00',
+    hours: '00',
+    minutes: '00',
+    seconds: '00'
+  });
+
+  useEffect(() => {
+    // Countdown timer (IST = UTC+5:30)
+    function updateCountdown() {
+      const wedding = new Date('2026-08-20T11:00:00+05:30');
+      const now = new Date();
+      const diff = wedding.getTime() - now.getTime();
+      
+      if (diff <= 0) {
+        setTimeLeft({ days: '00', hours: '00', minutes: '00', seconds: '00' });
+        return;
+      }
+      
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      
+      setTimeLeft({
+        days: String(d).padStart(2, '0'),
+        hours: String(h).padStart(2, '0'),
+        minutes: String(m).padStart(2, '0'),
+        seconds: String(s).padStart(2, '0')
+      });
+    }
+
+    updateCountdown();
+    const timer = setInterval(updateCountdown, 1000);
+
+    // Scroll reveal
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    return () => {
+      clearInterval(timer);
+      observer.disconnect();
+    };
+  }, []);
+
+  return (
+    <>
+      {/* Background decor */}
+      <div className="bg-decor">
+        <div className="bg-petal" style={{ width: '300px', height: '300px', background: '#f9a0b8', top: '-80px', left: '-80px', transform: 'rotate(25deg)' }}></div>
+        <div className="bg-petal" style={{ width: '240px', height: '240px', background: '#f9a0b8', bottom: '-60px', right: '-60px', transform: 'rotate(-20deg)' }}></div>
+        <div className="bg-petal" style={{ width: '160px', height: '160px', background: '#f2b8c6', top: '40%', right: '-30px', transform: 'rotate(40deg)' }}></div>
+        <div className="bg-petal" style={{ width: '130px', height: '130px', background: '#f2b8c6', top: '25%', left: '-20px', transform: 'rotate(-30deg)' }}></div>
+        <div className="bg-petal" style={{ width: '200px', height: '200px', background: '#f9c0d0', top: '65%', left: '-40px', transform: 'rotate(15deg)' }}></div>
+      </div>
+
+      {/* Floating petals */}
+      <div className="float-petal" style={{ left: '8%', width: '14px', height: '14px', background: '#f2b8c6', animationDuration: '9s', animationDelay: '0s' }}></div>
+      <div className="float-petal" style={{ left: '22%', width: '10px', height: '10px', background: '#f9a0b8', animationDuration: '12s', animationDelay: '2s' }}></div>
+      <div className="float-petal" style={{ left: '55%', width: '16px', height: '16px', background: '#f2b8c6', animationDuration: '8s', animationDelay: '1s' }}></div>
+      <div className="float-petal" style={{ left: '72%', width: '12px', height: '12px', background: '#f9a0b8', animationDuration: '11s', animationDelay: '3.5s' }}></div>
+      <div className="float-petal" style={{ left: '88%', width: '9px', height: '9px', background: '#f2b8c6', animationDuration: '10s', animationDelay: '0.5s' }}></div>
+      <div className="float-petal" style={{ left: '40%', width: '11px', height: '11px', background: '#f9c0d0', animationDuration: '13s', animationDelay: '4s' }}></div>
+
+      <div className="page">
+        {/* ===== HERO ===== */}
+        <div className="hero">
+          <div className="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+          <div className="bismillah-transliteration">In the name of Allah, the Most Gracious, the Most Merciful</div>
+
+          <div className="tag-line">— Wedding Invitation —</div>
+
+          {/* Rose SVG art */}
+          <svg className="rose-art" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="30" cy="95" rx="20" ry="8" fill="#f2b8c6" opacity="0.5" transform="rotate(-50 30 95)" />
+            <ellipse cx="110" cy="95" rx="20" ry="8" fill="#f2b8c6" opacity="0.5" transform="rotate(50 110 95)" />
+            <ellipse cx="50" cy="80" rx="16" ry="6" fill="#f2b8c6" opacity="0.4" transform="rotate(-25 50 80)" />
+            <ellipse cx="90" cy="80" rx="16" ry="6" fill="#f2b8c6" opacity="0.4" transform="rotate(25 90 80)" />
+            <path d="M70 130 Q48 105 30 90" stroke="#e8a0b4" strokeWidth="1.2" fill="none" />
+            <path d="M70 130 Q92 105 110 90" stroke="#e8a0b4" strokeWidth="1.2" fill="none" />
+            <path d="M70 130 Q70 90 70 30" stroke="#e8a0b4" strokeWidth="1.2" fill="none" />
+            <path d="M70 90 Q55 75 45 65" stroke="#e8a0b4" strokeWidth="0.8" fill="none" />
+            <path d="M70 90 Q85 75 95 65" stroke="#e8a0b4" strokeWidth="0.8" fill="none" />
+            <ellipse cx="70" cy="42" rx="18" ry="22" fill="#e8849e" opacity="0.9" />
+            <ellipse cx="55" cy="52" rx="16" ry="20" fill="#d4607e" opacity="0.85" transform="rotate(-25 55 52)" />
+            <ellipse cx="85" cy="52" rx="16" ry="20" fill="#d4607e" opacity="0.85" transform="rotate(25 85 52)" />
+            <ellipse cx="70" cy="65" rx="14" ry="18" fill="#c04568" opacity="0.8" />
+            <ellipse cx="58" cy="68" rx="13" ry="16" fill="#d4607e" opacity="0.75" transform="rotate(-15 58 68)" />
+            <ellipse cx="82" cy="68" rx="13" ry="16" fill="#d4607e" opacity="0.75" transform="rotate(15 82 68)" />
+            <circle cx="70" cy="44" r="14" fill="#c04568" />
+            <circle cx="70" cy="44" r="10" fill="#d4607e" />
+            <circle cx="70" cy="44" r="6" fill="#e8849e" />
+            <circle cx="70" cy="42" r="3" fill="#f9c0d0" />
+            <circle cx="70" cy="42" r="1.5" fill="#c9a84c" />
+            <circle cx="45" cy="64" r="8" fill="#d4607e" opacity="0.8" />
+            <circle cx="45" cy="64" r="5" fill="#e8849e" />
+            <circle cx="45" cy="64" r="2.5" fill="#f9c0d0" />
+            <circle cx="95" cy="64" r="8" fill="#d4607e" opacity="0.8" />
+            <circle cx="95" cy="64" r="5" fill="#e8849e" />
+            <circle cx="95" cy="64" r="2.5" fill="#f9c0d0" />
+            <circle cx="32" cy="32" r="1.5" fill="#c9a84c" opacity="0.7" />
+            <circle cx="108" cy="28" r="1.5" fill="#c9a84c" opacity="0.7" />
+            <circle cx="20" cy="62" r="1" fill="#c9a84c" opacity="0.5" />
+            <circle cx="120" cy="58" r="1" fill="#c9a84c" opacity="0.5" />
+          </svg>
+
+          <div className="together-line">Together with their families</div>
+
+          <div className="groom-name">Jumail Ahammed</div>
+          <span className="amp">&amp;</span>
+          <div className="bride-name">Hanunath Jausia</div>
+
+          <p className="invite-prose">joyfully invite you to witness the beginning of their forever</p>
+          <p className="presence-line">✦ &nbsp; Your presence means the world to us &nbsp; ✦</p>
+        </div>
+
+        {/* ===== GOLD DIVIDER ===== */}
+        <div className="gold-divider"><div className="gold-diamond"></div></div>
+
+        {/* ===== QURANIC QUOTE ===== */}
+        <div className="quran-card reveal">
+          <div className="quran-glow"></div>
+          <div className="arabic-text">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</div>
+          <div className="quran-translation">"And of His signs is that He created for you from yourselves mates that you may find tranquility in them; and He placed between you affection and mercy."</div>
+          <div className="quran-ref">— Surah Ar-Rum, 30:21 —</div>
+        </div>
+
+        {/* ===== DATE & VENUE ===== */}
+        <div className="info-card reveal">
+          <div className="section-label">— The Blessed Day —</div>
+
+          <div className="date-row">
+            <div className="date-col">
+              <div className="date-big">20</div>
+              <div className="date-lbl">Day</div>
+            </div>
+            <div className="date-sep-line"></div>
+            <div className="date-col">
+              <div className="date-small">August</div>
+              <div className="date-lbl">Month</div>
+            </div>
+            <div className="date-sep-line"></div>
+            <div className="date-col">
+              <div className="date-small">2026</div>
+              <div className="date-lbl">Year</div>
+            </div>
+          </div>
+
+          <div className="time-badge">Thursday &nbsp;·&nbsp; 11:00 AM IST</div>
+
+          <div className="venue-sep"></div>
+
+          <div className="section-label">— Venue —</div>
+          <div className="venue-name">Wind Valley</div>
+          <div className="venue-location">Pady Road, Cherkala</div>
+
+          <div className="mt-8 flex flex-col items-center">
+            <div className="p-3 bg-white border border-rose-light rounded-xl shadow-sm inline-block">
+              <QRCodeCanvas 
+                value="https://share.google/RKhqoclv1HZh9JYTr" 
+                size={120}
+                level="H"
+                includeMargin={false}
+                fgColor="#b5354f"
+              />
+            </div>
+            <a 
+              href="https://share.google/RKhqoclv1HZh9JYTr" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="mt-4 text-[10px] sans uppercase tracking-[0.2em] text-rose-mid hover:text-rose transition-colors flex items-center gap-2"
+            >
+              <span>✦ View on Google Maps ✦</span>
+            </a>
+          </div>
+        </div>
+
+        {/* ===== COUNTDOWN ===== */}
+        <div className="countdown-wrap reveal">
+          <div className="countdown-label">— Counting down to forever —</div>
+          <div className="countdown">
+            <div className="cd-unit"><span className="cd-num">{timeLeft.days}</span><span className="cd-lbl">Days</span></div>
+            <div className="cd-unit"><span className="cd-num">{timeLeft.hours}</span><span className="cd-lbl">Hours</span></div>
+            <div className="cd-unit"><span className="cd-num">{timeLeft.minutes}</span><span className="cd-lbl">Mins</span></div>
+            <div className="cd-unit"><span className="cd-num">{timeLeft.seconds}</span><span className="cd-lbl">Secs</span></div>
+          </div>
+        </div>
+
+        {/* ===== GOLD DIVIDER ===== */}
+        <div className="gold-divider reveal"><div className="gold-diamond"></div></div>
+
+        {/* ===== PRESENCE CARD ===== */}
+        <div className="presence-card reveal">
+          <p className="presence-main">
+            We joyfully request the honour of your presence as we celebrate the union of our hearts.<br /><br />
+            <strong>Your presence matters to us the most —</strong><br />
+            it would make our special day truly complete.
+          </p>
+        </div>
+
+        {/* ===== FOOTER ===== */}
+        <div className="footer reveal">
+          <div className="gold-divider" style={{ marginBottom: '1.2rem' }}><div className="gold-diamond"></div></div>
+          <svg width="90" height="30" viewBox="0 0 90 30" fill="none" style={{ display: 'block', margin: '0 auto 0.8rem' }}>
+            <ellipse cx="45" cy="15" rx="10" ry="12" fill="#e8849e" opacity="0.8" />
+            <ellipse cx="37" cy="18" rx="8" ry="10" fill="#d4607e" opacity="0.75" transform="rotate(-20 37 18)" />
+            <ellipse cx="53" cy="18" rx="8" ry="10" fill="#d4607e" opacity="0.75" transform="rotate(20 53 18)" />
+            <circle cx="45" cy="14" r="5" fill="#c04568" />
+            <circle cx="45" cy="14" r="3" fill="#e8849e" />
+            <circle cx="45" cy="14" r="1.5" fill="#f9c0d0" />
+            <ellipse cx="20" cy="20" rx="7" ry="5" fill="#f2b8c6" opacity="0.5" transform="rotate(-30 20 20)" />
+            <ellipse cx="70" cy="20" rx="7" ry="5" fill="#f2b8c6" opacity="0.5" transform="rotate(30 70 20)" />
+          </svg>
+          <div className="footer-names">Jumail &nbsp;✦&nbsp; Jausia</div>
+          <div style={{ fontSize: '9px', letterSpacing: '3px', color: '#c9a84c', textTransform: 'uppercase', marginTop: '0.5rem', fontFamily: "'Lato',sans-serif", fontWeight: 300 }}>20 · August · 2026</div>
+        </div>
+      </div>
+    </>
+  );
+}
