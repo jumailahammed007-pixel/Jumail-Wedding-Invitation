@@ -237,5 +237,8 @@ export default function App() {
           </svg>
           <div className="footer-names">Jumail &nbsp;✦&nbsp; Jausia</div>
           <div style={{ fontSize: '9px', letterSpacing: '3px', color: '#c9a84c', textTransform: 'uppercase', marginTop: '0.5rem', fontFamily: "'Lato',sans-serif", fontWeight: 300 }}>20 · August · 2026</div>
-          
-        
+        </div>
+      </div>
+    </>
+  );
+}
